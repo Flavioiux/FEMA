@@ -1,0 +1,76 @@
+<head>
+<link rel="stylesheet" href="CSS_prodotti.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="45%">
+<img src="iphone17promax.jpg"style="height:100%; width:100%; border-radius:20px 0 0 20px;box-shadow: 0 0px 25px lightgrey;">
+</td>
+<td width="55%" valign="middle" style="padding:40px 60px 40px 20px;">
+<div style="font-size:56px;letter-spacing:-1.5px;margin-bottom:25px;">
+<b>IPhone 17 pro</b>
+</div>
+<div style="font-size:20px;line-height:1.7;margin-bottom:40px;max-width:90%;">
+L’IPhone 17 pro è lo smartphone Apple 2025 progettato per offrire
+prestazioni elevate e un’esperienza fluida grazie al display OLED
+Super Retina XDR da 6,3″ con ProMotion a 120 Hz, al chip A19
+e alla doppia fotocamera da 48 MP.
+</div>
+<div class="scheda-prodotto">
+    <button onclick="
+    let carrello = JSON.parse(localStorage.getItem('carrello_spesa')) || [];
+    carrello.push({ nome: 'IPhone 17 pro', prezzo: 1300 });
+    localStorage.setItem('carrello_spesa', JSON.stringify(carrello));
+    location.href='carrello.html';"
+            style="background-color: #0071E3; color: white; border: none; font-family: sans-serif; font-size: 14px; border-radius: 20px; padding: 10px 24px; cursor: pointer; font-weight: 600;">
+        Aggiungi al carrello
+    </button>
+</div>
+</td>
+</tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width:1200px;margin:60px auto 100px;background-color:white;border-radius:20px;">
+<tr>
+<td colspan="2" style="padding:50px 40px 20px;">
+<div style="
+font-size:32px;
+letter-spacing:-1px;
+">
+<b>Specifiche & Compatibilità</b>
+</div>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" style="padding:30px 40px;">
+<div style="font-size:18px; margin-bottom:15px;">
+<b>Specifiche principali</b>
+</div>
+<ul style="margin-left:18px;padding:0;">
+<li>Display OLED Super Retina XDR 6,3″ con ProMotion 120 Hz</li>
+<li>Chip Apple A19 ad alte prestazioni</li>
+<li>Doppia fotocamera posteriore da 48 MP</li>
+<li>Fotocamera frontale Center Stage da 18 MP</li>
+<li>Autonomia fino a 30 ore di riproduzione video</li>
+<li>Certificazione IP68</li>
+</ul>
+</td>
+<td width="50%" valign="top" style="padding:30px 40px;">
+    <div style="font-size:18px; margin-bottom:15px;">
+        <b>Compatibilità</b>
+    </div>
+    <ul style="margin-left:18px;padding:0;">
+        <li>iOS con supporto completo App Store</li>
+        <li>Reti 5G, 4G LTE, 3G/2G</li>
+        <li>MagSafe, AirPods, Apple Watch e Bluetooth</li>
+        <li>iCloud, AirDrop, FaceTime e Apple Pay</li>
+        <li>Ricarica USB-C e wireless Qi / MagSafe</li>
+    </ul>
+    <div style="font-size:18px; margin-bottom:10px;">
+        <b>Prezzo:</b>
+        <span style="color:blue; font-weight:700;">1300€</span>
+    </div>
+</td>
+</tr>
+</table>
+</body>

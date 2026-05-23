@@ -1,0 +1,79 @@
+<head>
+<link rel="stylesheet" href="CSS_prodotti.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="45%" >
+<img src="airmax.jpg" style="height:100%; width:100%; border-radius:20px 0 0 20px;box-shadow: 0 0px 25px lightgrey;">
+</td>
+<td width="55%" valign="middle" style="padding:55px 75px 55px 20px;">
+    <div style="font-size:56px;letter-spacing:-1.8px;margin-bottom:24px;">
+        <b>AirPods Max</b>
+    </div>
+
+    <div style="font-size:20px;max-width:92%;">
+        Gli AirPods Max sono cuffie over-ear di Apple con audio ad alta fedeltà,
+        cancellazione attiva del rumore, modalità trasparenza e audio spaziale dinamico.
+        Uniscono design elegante e comfort per un’esperienza sonora immersiva e coinvolgente.
+    </div>
+    <br />
+    <div class="scheda-prodotto">
+        <button onclick="
+        let carrello = JSON.parse(localStorage.getItem('carrello_spesa')) || [];
+        carrello.push({ nome: 'AirPods Max', prezzo: 475 });
+        localStorage.setItem('carrello_spesa', JSON.stringify(carrello));
+        location.href='carrello.html';"
+                style="background-color: #0071E3; color: white; border: none; font-family: sans-serif; font-size: 14px; border-radius: 20px; padding: 10px 24px; cursor: pointer; font-weight: 600;">
+            Aggiungi al carrello
+        </button>
+    </div>
+</td>
+</tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" 
+style="max-width:1200px;margin:90px auto 60px;background-color:white;border-radius:40px;">
+<tr>
+<td colspan="2" style="padding:55px 65px 30px;">
+<div style="font-size:34px;">
+<b>Specifiche & Compatibilità</b>
+</div>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" style="padding:35px 65px 65px;">
+<div style="font-size:18px;margin-bottom:18px;">
+<b>Specifiche principali</b>
+</div>
+
+<ul style="padding:0;margin:0;">
+<li>Driver dinamici da 40 mm ad alta fedeltà</li>
+<li>Cancellazione attiva del rumore (ANC) e modalità Trasparenza</li>
+<li>Audio spaziale con tracciamento dinamico della testa</li>
+<li>Chip Apple H1 per ogni orecchio</li>
+<li>Batteria fino a 20 ore di riproduzione</li>
+<li>Design over-ear con archetto in acciaio inossidabile e earcup in memory foam</li>
+</ul>
+</td>
+<td width="50%" valign="top" style="padding:35px 65px 65px;">
+    <div style="font-size:18px;  margin-bottom:18px;">
+        <b>Compatibilità</b>
+    </div>
+
+    <ul style="padding:0;margin:0;">
+        <li>Compatibili con iPhone, iPad, Mac, Apple TV e Apple Watch</li>
+        <li>Connessione Bluetooth 5.0 e chip H1 per switching automatico</li>
+        <li>Supporto audio Lossless e Spatial Audio</li>
+        <li>Compatibili con Siri e controlli touch sugli earcup</li>
+        <li>Funzionano con l’app Dov’è per localizzazione</li>
+        <li>Funzionano anche con dispositivi non Apple tramite Bluetooth standard</li>
+    </ul>
+    <div style="font-size:18px; margin-bottom:10px;">
+        <b>Prezzo:</b>
+        <span style="color:blue; font-weight:700;">475€</span>
+    </div>
+</td>
+</tr>
+</table>
+
+</body>

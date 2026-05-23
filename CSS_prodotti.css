@@ -1,0 +1,4 @@
+body{margin: 0; font-family: Lucida Sans Unicode;}
+table{max-width:1200px; margin:40px auto; background-color:white;border-radius:20px; border-collapse:collapse;}
+.compra{color:white; text-decoration:none; font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 14px}
+#compra{background-color:#0071E3; border-radius:20px; width:15%; padding: 7px 15px;}

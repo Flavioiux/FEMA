@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Pagamento</title>
+    <style>
+        body {
+            background-color: #111;
+            color: white;
+            font-family: sans-serif;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .scatola-pagamento {
+            max-width: 500px;
+            margin: 0 auto;
+            background: #222;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.5);
+        }
+
+        .prezzo-finale {
+            font-size: 36px;
+            color: lightblue; 
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        .btn-conferma {
+            background-color: green; 
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 6px;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: background 0.2s;
+        }
+
+            .btn-conferma:hover {
+                background-color: lightgreen;
+            }
+    </style>
+</head>
+<body>
+
+    <div class="scatola-pagamento">
+        <h2>Riepilogo Pagamento</h2>
+        <p>Stai completando l'acquisto per un importo totale di:</p>
+
+        <div class="prezzo-finale" id="importo-totale">€0.00</div>
+
+        <p>Clicca qui sotto per concludere.</p>
+        <button class="btn-conferma" onclick="concludiOrdine()">Conferma e Paga</button>
+    </div>
+
+    <script>
+        window.onload = function() {
+            let totaleSalvato = localStorage.getItem('totale_da_pagare');
+
+            if (totaleSalvato) {
+                document.getElementById('importo-totale').innerText = "€" + totaleSalvato;
+            } else {
+                document.getElementById('importo-totale').innerText = "€0.00";
+            }
+        };
+
+        function concludiOrdine() {
+            alert("Pagamento simulato con successo! Grazie per il tuo acquisto.");
+
+            localStorage.removeItem('totale_da_pagare');
+
+            location.href = 'Home.html';
+        }</script>
+</body>
+</html>

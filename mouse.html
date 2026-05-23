@@ -1,0 +1,108 @@
+<head>
+<link rel="stylesheet" href="CSS_prodotti.css">
+</head>
+<body>
+<table width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+        <td width="40%" valign="top">
+            <img src="mouseg502.webp" style="width: 100%; box-shadow: 0 10px 25px lightgray; border-radius: 20px 0 0 20px;">
+        </td>
+
+        <td width="60%" valign="top">
+            <div style="margin:40px;">
+
+                <div style="font-size:44px; margin-bottom:20px;">
+                    <b>Logitech G502 X</b>
+                </div>
+
+                <div style="font-size:22px; margin-bottom:10px; ">
+                    <b>Descrizione</b>
+                </div>
+
+                <div style="font-size:18px; color:#515154; margin-bottom:30px; color:#515154;">
+                    G502 X è l’ultimo arrivato nella leggendaria gamma G502.
+                    Ripensato per una drastica riduzione del peso fino a soli 89 grammi,
+                    integra i primi switch ibridi ottici-meccanici LIGHTFORCE
+                    e il sensore sub-micron HERO 25K per precisione estrema.
+                </div>
+
+                <div class="scheda-prodotto">
+                    <button onclick="
+                    let carrello = JSON.parse(localStorage.getItem('carrello_spesa')) || [];
+                    carrello.push({ nome: 'Logitech G502 X', prezzo: 80 });
+                    localStorage.setItem('carrello_spesa', JSON.stringify(carrello));
+                    location.href='carrello.html';"
+                    style="background-color: #0071E3; color: white; border: none; font-family: sans-serif; font-size: 14px; border-radius: 20px; padding: 10px 24px; cursor: pointer; font-weight: 600;">
+                        Aggiungi al carrello
+                    </button>
+                </div>
+            </div>        
+        </td>
+    </tr>
+</table>
+<table width="100%" cellspacing="0" cellpadding="0" style="max-width:1200px; margin:40px auto; background-color:#ffffff;border-radius:20px; border-collapse:collapse;">
+
+    <tr>
+        <td colspan="2">
+            <div style="margin:30px; font-size:22px;">
+                <b>Specifiche e compatibilità</b>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td width="50%" valign="top">
+            <div style="margin:30px;">
+
+                <div style="font-size:18px; margin-bottom:10px;">
+                    <b>Specifiche tecniche</b>
+                </div>
+
+                <b>Specifiche generali</b>
+                <ul style="margin-left:20px; margin-top:6px; ">
+                    <li>Risoluzione: 100 – 25.600 DPI</li>
+                    <li>Memoria interna: fino a 5 profili</li>
+                    <li>Peso: 89 grammi</li>
+                    <li>Controlli programmabili: 13</li>
+                </ul>
+
+                <b>Tracciamento</b>
+                <ul style="margin-left:20px; margin-top:6px; color:#515154;">
+                    <li>Sensore: HERO 25K</li>
+                    <li>Accelerazione massima: 40G</li>
+                    <li>Velocità massima: 400 IPS</li>
+                    <li>Nessun smoothing / accelerazione / filtraggio</li>
+                </ul>
+
+                <b>Durata</b>
+                <div style="margin-top:6px; color:#515154;">
+                    Piedini in PTFE a basso attrito
+                </div>
+
+            </div>
+        </td>
+
+        <td width="50%" valign="top">
+            <div style="margin:30px;">
+
+                <div style="font-size:18px; margin-bottom:10px;">
+                    <b>Requisiti di sistema</b>
+                </div>
+
+                <ul style="margin-left:20px; margin-top:6px; color:#515154;">
+                    <li>Porta USB</li>
+                    <li>Accesso a Internet per software opzionale</li>
+                    <li>Windows 10 o versioni successive</li>
+                    <li>macOS 10.14 o versioni successive</li>
+                </ul>
+                <div style="font-size:18px; margin-bottom:10px;">
+                    <b>Prezzo:</b>
+                    <span style="color:blue; font-weight:700;">80€</span>
+                </div>
+            </div>
+        </td>
+    </tr>
+
+</table>
+
+</body>

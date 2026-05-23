@@ -1,0 +1,135 @@
+﻿<html>
+<head>
+    <title>Il tuo Carrello</title>
+    <style>
+        body {
+            background-color: #111;
+            color: white;
+            font-family: sans-serif;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .scatola-carrello {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #222;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .prodotto-riga {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        .tasto-svuota {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        .tasto-svuota:hover{
+            background-color: orangered;
+        }
+
+        .tasto-acquista {
+            background-color: #0071E3;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 5px;
+            font-weight: 600;
+            margin-left: 30px; 
+        }
+
+        .tasto-acquista:hover {
+            background-color: #147ce5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scatola-carrello">
+        <h2>🛒 Il tuo Carrello</h2>
+        <div id="lista-carrello"></div>
+        <h3 id="totale-carrello">Totale: €0</h3>
+
+        <button class="tasto-svuota" onclick="svuotaCarrello()">Svuota Carrello</button>
+
+        <button class="tasto-acquista" onclick="procediAcquisto()">Procedi all'acquisto</button>
+    </div>
+
+    <script>
+
+        function mostraCarrello() {
+            let carrello = JSON.parse(localStorage.getItem('carrello_spesa')) || [];
+            let contenitore = document.getElementById('lista-carrello');
+            let totaleElemento = document.getElementById('totale-carrello');
+
+            if (carrello.length === 0) {
+                contenitore.innerHTML = "<p>Il tuo carrello è vuoto.</p>";
+                totaleElemento.innerText = "Totale: €0";
+                return;
+            }
+
+            let html = "";
+            let totale = 0;
+
+            carrello.forEach(prodotto => {
+                html += `<div class="prodotto-riga">
+                                <span>${prodotto.nome}</span>
+                                <span>€${prodotto.prezzo}</span>
+                             </div>`;
+                totale += parseFloat(prodotto.prezzo);
+            });
+
+            contenitore.innerHTML = html;
+            totaleElemento.innerText = "Totale: €" + totale.toFixed(2);
+        }
+
+        function procediAcquisto() {
+            let carrello = JSON.parse(localStorage.getItem('carrello_spesa')) || [];
+            if (carrello.length === 0) {
+                alert("Il tuo carrello è vuoto! Aggiungi un prodotto prima di acquistare.");
+                return;
+            }
+
+            let nomeUtentePadrone = localStorage.getItem('utente_loggato') || "";
+
+            if (nomeUtentePadrone === "" || nomeUtentePadrone.trim() === "") {
+                alert("Devi effettuare l'accesso per poter procedere con l'acquisto! Accedi in alto a destra sulla barra del sito.");
+            } else {
+
+                let totale = 0;
+                carrello.forEach(prodotto => {
+                    totale += parseFloat(prodotto.prezzo);
+                });
+
+                localStorage.setItem('totale_da_pagare', totale.toFixed(2));
+
+                alert("Grazie " + nomeUtentePadrone + "! Il tuo ordine è stato inoltrato. Verrai reindirizzato alla pagina di pagamento.");
+
+                localStorage.removeItem('carrello_spesa');
+
+                location.href = 'pagamento.html';
+            }
+        }
+
+        function svuotaCarrello() {
+            localStorage.removeItem('carrello_spesa');
+            mostraCarrello();
+        }
+
+        mostraCarrello();
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<head>
+<link rel="stylesheet" href="CSS_prodotti.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="45%">
+<img src="applevision.jpg" style="width:100%; border-radius:20px 0 0 20px;box-shadow: 0 0px 25px lightgrey;">
+</td>
+<td width="55%" valign="middle" style="padding:55px 75px 55px 20px;">
+<div style="font-size:56px;letter-spacing:-1.8px;margin-bottom:24px;">
+<b>Apple Vision Pro</b>
+</div>
+
+<div style="font-size:20px;color:black;max-width:92%;">
+Apple Vision Pro è il primo computer spaziale di Apple.
+Integra perfettamente contenuti digitali e mondo reale,
+permettendo di controllare app e contenuti tramite occhi,
+mani e voce, offrendo un’esperienza immersiva e naturale
+come mai prima d’ora.
+</div>
+<br/>
+<div class="scheda-prodotto">
+    <button onclick="
+    let carrello = JSON.parse(localStorage.getItem('carrello_spesa')) || [];
+    carrello.push({ nome: 'Vision Pro', prezzo: 7000 });
+    localStorage.setItem('carrello_spesa', JSON.stringify(carrello));
+    location.href='carrello.html';"
+            style="background-color: #0071E3; color: white; border: none; font-family: sans-serif; font-size: 14px; border-radius: 20px; padding: 10px 24px; cursor: pointer; font-weight: 600;">
+        Aggiungi al carrello
+    </button>
+</div>
+</td>
+</tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width:1200px;margin:90px auto 60px;background-color:white;border-radius:40px;">
+<tr>
+<td colspan="2" style="padding:55px 65px 30px;">
+<div style="font-size:34px;">
+<b>Specifiche & Compatibilità</b>
+</div>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" style="padding:35px 65px 65px;">
+<div style="font-size:18px;margin-bottom:18px;">
+<b>Specifiche principali</b>
+</div>
+
+<ul style="padding:0;margin:0;color:black;">
+<li>Display micro-OLED con oltre 23 milioni di pixel</li>
+<li>Chip Apple M2 + chip R1 per elaborazione in tempo reale</li>
+<li>Eye tracking, hand tracking e controllo vocale</li>
+<li>Audio spaziale con doppio driver per orecchio</li>
+<li>Fotocamere e sensori avanzati per realtà mista</li>
+<li>Batteria esterna fino a 2 ore di utilizzo</li>
+</ul>
+</td>
+<td width="50%" valign="top" style="padding:35px 65px 65px;">
+    <div style="font-size:18px;  margin-bottom:18px;">
+        <b>Compatibilità</b>
+    </div>
+
+    <ul style="padding:0;margin:0;color:black;">
+        <li>Sistema operativo visionOS</li>
+        <li>App native Apple e App Store dedicato</li>
+        <li>Integrazione con Mac (Mac Virtual Display)</li>
+        <li>Compatibile con iCloud, FaceTime e Apple TV</li>
+        <li>Supporto AirPods e accessori Bluetooth</li>
+        <li>Sincronizzazione con ecosistema Apple</li>
+    </ul>
+    <div style="font-size:18px; margin-bottom:10px;">
+        <b>Prezzo:</b>
+        <span style="color:blue; font-weight:700;">7000€</span>
+    </div>
+</td>
+</tr>
+</table>
+
+</body>

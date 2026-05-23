@@ -1,0 +1,29 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.uno {
+    padding: 20px;
+    border-radius: 60px;
+    width: 70%;
+    height: 80%;
+    gap: 10px;
+    margin: 0 auto;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+#apple {
+    background-image: url('video.png');
+}
+
+#logi {
+    background-image: url('logitechlogo.JPG');
+}
+
+#dji {
+    background-image: url('dji.jpg');
+}

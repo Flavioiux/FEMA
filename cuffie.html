@@ -1,0 +1,134 @@
+<head>
+<link rel="stylesheet" href="CSS_prodotti.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+        <td width="40%" valign="top">
+            <img src="cuffie.webp" style="width: 100%; border-radius: 20px 0 0 20px; box-shadow: 0 10px 25px lightgray;">
+        </td>
+
+        <td width="60%" valign="top">
+            <div style="margin-left:40px; margin-top:30px;">
+
+                <div style="font-size:44px; margin-bottom:20px;">
+                    <b>ASTRO A50 (Gen 5)</b>
+                </div>
+
+                <div style="font-size:22px; font-weight:600; margin-bottom:10px;">
+                   <b>Descrizione</b>
+                </div>
+
+                <div style="font-size:18px; color:#515154; margin-bottom:30px; margin-right:40px;">
+                    Collegatevi e passate da un sistema di gioco all'altro con PLAYSYNC AUDIO,
+                    tra cui Xbox, PS5, PC, Nintendo Switch e altro ancora. Ascoltate i dettagli
+                    nei densi paesaggi di battaglia con i driver PRO-G GRAPHENE e comandate la
+                    vostra squadra con il microfono all'avanguardia da 48 kHz.
+                </div>
+
+                <div class="scheda-prodotto">
+                    <button onclick="
+                    let carrello = JSON.parse(localStorage.getItem('carrello_spesa')) || [];
+                    carrello.push({ nome: 'Cuffie Astro A50', prezzo: 180 });
+                    localStorage.setItem('carrello_spesa', JSON.stringify(carrello));
+                    location.href='carrello.html';"
+                            style="background-color: #0071E3; color: white; border: none; font-family: sans-serif; font-size: 14px; border-radius: 20px; padding: 10px 24px; cursor: pointer; font-weight: 600;">
+                        Aggiungi al carrello
+                    </button>
+                </div>
+		    </div>
+        </td>
+    </tr>
+</table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"
+       style="max-width: 1200px; margin: 40px auto; background-color: #ffffff; border-radius: 20px; border-collapse: collapse;">
+
+    <tr>
+        <td colspan="2">
+            <div style="margin:30px; font-size:22px;">
+                <b>Specifiche e compatibilità</b>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td width="50%" valign="top">
+            <div style="margin:30px;">
+
+                <div style="font-size:18px; margin-bottom:10px;">
+                    <b>Specifiche tecniche</b>
+                </div>
+
+                <b>Audio USB</b>
+                <ul style="margin-left:20px; margin-top:6px; margin-bottom:20px; color:#515154;">
+                    <li>1× massimo 24 bit / 48 kHz (PC)</li>
+                    <li>2× massimo 16 bit / 48 kHz (console)</li>
+                </ul>
+
+                <b>Cuffia con microfono</b>
+                <ul style="margin-left:20px; margin-top:6px; margin-bottom:20px;  color:#515154;">
+                    <li>363 grammi</li>
+                    <li>Driver: 40 mm PRO-G GRAFENE</li>
+                    <li>Risposta in frequenza: 20–20.000 Hz</li>
+                    <li>Compatibile con Dolby Atmos e Windows Sonic™</li>
+                </ul>
+
+                <b>Microfono</b>
+                <ul style="margin-left:20px; margin-top:6px; margin-bottom:20px; color:#515154;">
+                    <li>Omnidirezionale</li>
+                    <li>Risposta in frequenza: 60–20.000 Hz</li>
+                    <li>Campionamento: 16 bit / 48 kHz</li>
+                </ul>
+
+                <b>Tecnologia wireless</b>
+                <ul style="margin-left:20px; margin-top:6px; margin-bottom:20px; color:#515154;">
+                    <li>LIGHTSPEED Wireless 24 bit / 48 kHz</li>
+                    <li>Portata fino a 12 metri</li>
+                </ul>
+
+                <b>Batteria</b>
+                <ul style="margin-left:20px; margin-top:6px; margin-bottom:0; color:#515154;">
+                    <li>Autonomia fino a 24 ore</li>
+                    <li>Ricarica tramite dock o USB-C</li>
+                </ul>
+
+            </div>
+        </td>
+
+        <td width="50%" valign="top">
+            <div style="margin:30px;">
+
+                <div style="font-size:18px; margin-bottom:10px;">
+                    <b>Requisiti di sistema</b>
+                </div>
+
+                Console Xbox Series X|S o One (USB)<br />
+                PlayStation 4 / 5 (USB)<br />
+                PC Windows 10 / 11 (USB 2.0)<br />
+                Nintendo Switch / Switch 2 (USB)<br />
+                macOS 13+<br /><br />
+
+                <b>Accesso Internet richiesto per</b>
+                <ul style="margin-left:20px; margin-top:6px; margin-bottom:20px; color:#515154;">
+                    <li>Logitech G HUB</li>
+                    <li>App Logitech G</li>
+                    <li>Dolby Atmos (Xbox e Windows)</li>
+                </ul>
+
+                <b>Compatibile anche con</b>
+                <ul style="margin-left:20px; margin-top:6px; margin-bottom:0; color:#515154;">
+                    <li>Dispositivi Bluetooth</li>
+                    <li>PC / Mac via USB</li>
+                </ul>
+                <div style="font-size:18px; margin-bottom:10px;">
+                    <b>Prezzo:</b>
+                    <span style="color:blue; font-weight:700;">180€</span>
+                </div>
+            </div>
+        </td>
+    </tr>
+
+</table>
+
+</body>

@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+    <title>FEMA_Store</title>
+    <link rel="stylesheet" type="text/css" href="barra.css" />
+    <meta charset="utf-8" />
+</head>
+<body>
+
+    <video autoplay loop muted>
+        <source src="video.mp4" type="video/mp4">
+    </video>
+
+    <div id="contenitore">
+        <table id="tabella" valign="middle" align="center" border="0" cellspacing="0" width="40%">
+            <tr align="center">
+                <td id="logo"><a href="Home.html" target="contenuto"><img height="100" src="logo.jpg"></a></td>
+                <td class="casella">
+                    <a href="Home.html" target="contenuto" class="link-tendina">Marche</a>
+                    <div class="tendina">
+                        <a href="apple.html" target="contenuto"> Apple </a>
+                        <a href="logitech.html" target="contenuto"> Logitech </a>
+                        <a href="dji.html" target="contenuto"> DJI </a>
+                    </div>
+                </td>
+                <td class="casella">
+                    <a href="Home.html" target="contenuto" class="link-tendina">Prodotti</a>
+                    <div class="tendina">
+                        <a href="pippo1.html" target="contenuto"> Iphone 17 Pro </a>
+                        <a href="pippo2.html" target="contenuto"> Vision Pro </a>
+                        <a href="pippo3.html" target="contenuto"> AirPods Max </a>
+                        <a href="cuffie.html" target="contenuto"> Astro A50 (Gen 5) </a>
+                        <a href="volante.html" target="contenuto"> Volante G920/G29 </a>
+                        <a href="mouse.html" target="contenuto"> Mouse G502 X </a>
+                        <a href="djiosmoaction4.html" target="contenuto"> Fotocamera Osmo Action 4 </a>
+                        <a href="djineo2.html" target="contenuto"> Drone Neo 2 </a>
+                        <a href="djimini5pro.html" target="contenuto"> Drone Mini 5 Pro </a>
+                    </div>
+                </td>
+                <td><a class="carrello" href="carrello.html" target="contenuto">Carrello</a></td>
+                <td class="login">
+                    <div id="AreaUtente">
+                        <img id="bottone-login" height="70" src="persona_100x.png" />
+                        <span id="nome-utente" style="color: white; margin-left: 10px; font-size: 14px;"></span>
+                    </div>
+
+                    <div id="tendina-logout" class="tendina">
+                        <a href="carrello.html" id="carrello" target="contenuto">Carrello</a>
+                        <a href="#" id="bottone-esci" style="color: red;">Esci</a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <iframe src="Home.html" class="iframe-contenuto" name="contenuto"></iframe>
+
+    <script type="text/javascript">
+        document.getElementById('AreaUtente').onclick = function () {
+            let nomeUtenteElemento = document.getElementById('nome-utente');
+            let nomeAttuale = nomeUtenteElemento.innerText;
+
+            if (nomeAttuale === "") {
+                let nome = prompt("Entra con il tuo nome!");
+                if (nome && nome.trim() !== "") {
+                    nomeUtenteElemento.innerText = nome;
+                    localStorage.setItem('utente_loggato', nome);
+                }
+            } else {
+                let tendina = document.getElementById('tendina-logout');
+                if (tendina.style.display === "block") {
+                    tendina.style.display = "none";
+                } else {
+                    tendina.style.display = "block";
+                }
+            }
+        };
+
+        document.getElementById('bottone-esci').onclick = function (evento) {
+            evento.preventDefault();
+            evento.stopPropagation();
+            document.getElementById('nome-utente').innerText = "";
+            document.getElementById('tendina-logout').style.display = "none";
+            localStorage.removeItem('utente_loggato');
+        };
+
+        window.onload = function () {
+            let nomeSalvato = localStorage.getItem('utente_loggato');
+            if (nomeSalvato) {
+                document.getElementById('nome-utente').innerText = nomeSalvato;
+            }
+        }
+    </script>
+
+</body>
+</html>
